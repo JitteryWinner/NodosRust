@@ -69,13 +69,13 @@ fn print_result(distances: Vec<usize>) {
         if *distance == usize::MAX {
             println!("Nodo {}: inalcanzable", node);
         } else {
-            println!("Nodo {}: distancia mínima = {}", node, distance);
+            println!("Nodo {}: distancia minima = {}", node, distance);
         }
     }
 }
 
 fn main() {
-    println!("Caso de prueba 1: grafo básico");
+    println!("Prueba 1: si el grafo es basico");
     let graph1 = vec![
         vec![Edge { node: 1, cost: 4 }, Edge { node: 2, cost: 1 }],
         vec![Edge { node: 3, cost: 1 }],
@@ -85,7 +85,7 @@ fn main() {
     let distances1 = dijkstra(&graph1, 0);
     print_result(distances1);
 
-    println!("\nCaso de prueba 2: nodo inalcanzable");
+    println!("\nPrueba 2: si el nodo es inalcanzable");
     let graph2 = vec![
         vec![Edge { node: 1, cost: 3 }],
         vec![Edge { node: 2, cost: 4 }],
@@ -95,7 +95,7 @@ fn main() {
     let distances2 = dijkstra(&graph2, 0);
     print_result(distances2);
 
-    println!("\nCaso de prueba 3: múltiples caminos posibles");
+    println!("\nPrueba 3: si el grafo tiene multiples caminos posibles");
     let graph3 = vec![
         vec![Edge { node: 1, cost: 10 }, Edge { node: 2, cost: 2 }],
         vec![Edge { node: 3, cost: 1 }],
