@@ -15,3 +15,10 @@ Para verificar la instalación:
 ```bash
 rustc --version
 cargo --version
+
+```
+Correr en la terminal:
+rustc distancias.rs
+
+Luego:
+.\distancias.exe
